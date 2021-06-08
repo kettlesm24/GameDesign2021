@@ -60,7 +60,6 @@ while x == 10: # loop
         print("\n***********************")
         print("*       Top Score       *")
         print("*    Max-95234843pts    *")
-        print("* Nick Trimmer-15234pts *")
         print("*************************")
         input("Press enter to continue\n")
     if answ == 4:
