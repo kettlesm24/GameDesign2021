@@ -15,7 +15,11 @@ while x == 10: # loop
     print("*   4.-Quit Game      *")
     print("***********************")
     answ = input("Which option do you chose? (1-4): ") #input is able to select option from menu 
-    answ = int(answ) 
+    answ = answ[0]
+    if answ.isdigit():
+        answ = int(answ)
+    else:
+        print("Error: input is not 1-4")
     if answ == 1: #Option 1 is first planet
         planets1 = random.choice(planets)
         print("Good luck on" ,planets1,"\n")
@@ -23,6 +27,7 @@ while x == 10: # loop
         print("Travling to " ,planets1,"\n")
         time.sleep(2)
         print("You have arrived at", planets1,"\n")
+        #by Jgs
         print("""
                          *       +
            '                  |
@@ -43,6 +48,7 @@ while x == 10: # loop
         print("travling to " ,planets2,"\n")
         time.sleep(2)
         print("You have arrived at", planets2,"\n")
+        #by Jgs
         print("""
              _____
           .-'.  ':'-.
@@ -64,5 +70,4 @@ while x == 10: # loop
         input("Press enter to continue\n")
     if answ == 4:
         x = 1000
-        print("Goodbye")
-
+        print("\nGoodbye\n")

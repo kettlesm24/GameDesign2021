@@ -10,6 +10,6 @@ for i in range (0,11): print (z, 'x', i, '=', z*i) #the "For range" makes each l
 z = 3
 for i in range (0,11): print (z, 'x', i, '=', z*i)
 print()
-for z in range (0,11): 
-    for i in range (0,11): print (z, 'x', i, '=', z*i) 
+for z in range (1,11): 
+    for i in range (1,11): print (z, 'x', i, '=', z*i) 
     print()
