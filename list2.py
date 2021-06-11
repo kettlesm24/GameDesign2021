@@ -1,7 +1,6 @@
+#Max Kettles 6-10
+#In this program I will make menu for the many functions of a list
 numbers = []
-#["Lunrailia", "Runetera", "Uchillon", "Degeshan", "Zuiliv"]
-# creating an empty list
-# number of elemetns as input
 x = 10
 while x == 10:
     print("***********************") #menu
@@ -9,13 +8,13 @@ while x == 10:
     print("*        Menu         *")
     print("*                     *")
     print("*   1.-Input List     *")
-    print("*   2.-Delet Element  *")
+    print("*   2.-Remove Element *")
     print("*   3.-Find Element   *")
     print("*   4.Reverse list    *")
     print("*   5.Exit            *")
     print("***********************")
     answ = int(input("Which option do you chose? (1-5): "))
-    if answ == 1:
+    if answ == 1:#this first part gives the user a chance to put their own values in the list
         num1 = input("What is the first number?")  
         numbers.append(num1)
         num2 = input("What is the second number?")  
@@ -28,23 +27,23 @@ while x == 10:
         numbers.append(num5)
         print(numbers)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 2:
+    if answ == 2:#Removes a slected var from the list
         print(numbers)
         removed = input("Which number do you wish to remove? ")
         numbers.remove(removed)
         print(numbers)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 3:
+    if answ == 3:#Finds slected value
         print(numbers)
-        inx1 = input("What number do you wish to find? ")
-        inx2 = numbers.index(inx1)
-        print(inx1, "is located in postion", inx2)
+        indx1 = input("What number do you wish to find? ")
+        indx2 = numbers.index(indx1)
+        print(indx1, "is located in postion", indx2)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 4:
+    if answ == 4:#reverses list
         numbers.reverse
         print(numbers)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 5:
+    if answ == 5:#exits
         x = 1000
         print("\nGoodbye\n")
 
