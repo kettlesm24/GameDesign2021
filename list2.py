@@ -1,5 +1,7 @@
 #Max Kettles 6-10
 #In this program I will make menu for the many functions of a list
+import random
+import time
 numbers = []
 x = 10
 while x == 10:
@@ -10,8 +12,9 @@ while x == 10:
     print("*   1.-Input List     *")
     print("*   2.-Remove Element *")
     print("*   3.-Find Element   *")
-    print("*   4.Reverse list    *")
-    print("*   5.Exit            *")
+    print("*   4.-Random Element *")
+    print("*   5.-Reverse list    *")
+    print("*   6.-Exit            *")
     print("***********************")
     answ = int(input("Which option do you chose? (1-5): "))
     if answ == 1:#this first part gives the user a chance to put their own values in the list
@@ -39,11 +42,14 @@ while x == 10:
         indx2 = numbers.index(indx1)
         print(indx1, "is located in postion", indx2)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 4:#reverses list
+    if answ == 4:
+        rand1 = random.choice(numbers)
+        print("Your random number is ", rand1)
+    if answ == 5:#reverses list
         numbers.reverse
         print(numbers)
         input("\nIf you wish to return home, press enter\n")
-    if answ == 5:#exits
+    if answ == 6:#exits
         x = 1000
         print("\nGoodbye\n")
 
