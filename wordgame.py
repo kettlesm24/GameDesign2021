@@ -1,6 +1,10 @@
 #Max Kettles 6-11
 import random
 from typing import Counter
+import os
+import sys
+import time
+score=0
 gameWords= ['ppython','java','trackpad','ccomputer','kkeyboard','geeks','llaptop','headphones','charger','mmouse','ssoftware','hardware']
 name = input("What is your name? ")
 def menu():
@@ -41,13 +45,25 @@ while "1" in answ:
         guesses += new_guess
     wrdprint(word)
     if(counter == 0):
+        score = score + 1
         print("\nYou won")
+        file=open("score.txt","a")
+        file.write(str(score)+",      "+name+"\n")
+        file.close()
+
     else:
-        print("Sorry your too dumb")
+        print("Sorry, you loose")
     menu()
     answ = input("Which option do you chose? ")
+
 while "2" in answ:
-    print("working")
+    file = open("score.txt","r")
+    readscores = file.readlines()
+    sortedscores = sorted(readscores,reverse=True)
+    print("Top 3 scores:")
+    print("Pos\tPoints, Name")
+    for line in range(3):
+        print(str(line+1)+"\t"+str(sortedscores[line]))
     menu()
     answ = input("Which option do you chose? ")
 while "3" in answ:
